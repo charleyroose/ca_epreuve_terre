@@ -14,4 +14,5 @@ def pair_impair():
 
     except (IndexError, ValueError):
         print("Tu ne me la mettras pas à l’envers.")
+        
 pair_impair()

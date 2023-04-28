@@ -1,12 +1,14 @@
 import sys
 
-# Vérification du nombre d'arguments
-if len(sys.argv) != 2:
-    print("Erreur, il ne peut y avoir qu'un seul argument")
-else:
-    arg = sys.argv[1]
+def string_length():
+    # Vérification du nombre d'arguments
+    if len(sys.argv) != 2:
+        print("Erreur, il ne peut y avoir qu'un seul argument")
+        sys.exit()
+    else:
+        arg = sys.argv[1]
 
-    # Vérification de la nature de l'argument
+        # Vérification de la nature de l'argument
     if not isinstance(arg, str):
         print("Erreur, l'argument doit être une chaîne de caractères")
     elif arg.isdigit():
@@ -16,3 +18,5 @@ else:
         for x in arg:
         	nb_character += 1
         print(nb_character)
+            
+string_length()

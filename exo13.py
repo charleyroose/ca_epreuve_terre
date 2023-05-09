@@ -1,5 +1,23 @@
 import sys
 
+#test des combinaisons possible
+def find_switzerland():
+	if a < b:
+		if b < c:
+			return b
+		elif a < c:
+			return c
+		else:
+			return a
+
+	else:
+		if b > c:
+			return b
+		elif a > c:
+			return c
+		else:
+			return a
+			
 #Vérification du nb d'arguments
 if len(sys.argv) != 4:
 	print("Erreur, il doit y avoir 3 arguments.")
@@ -19,21 +37,5 @@ except (ValueError, IndexError):
 	print("Erreur, les arguments doivent être des nombres entier.")
 	sys.exit()
 
-#test des combinaisons possible
-else:
-	if a < b:
-		if b < c:
-			print(b)
-		elif a < c:
-			print(c)
-		else:
-			print(a)
 
-	else:
-		if b > c:
-			print(b)
-		elif a > c:
-			print(c)
-		else:
-			print(a)
-	sys.exit()
+print(find_switzerland())
